@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-dimviolet: #D0D6F9;
+
+  /* Fonts */
+  --font-bellfair: "Bellefair", serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+  --font-barlow: "Barlow", sans-serif;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+
+  /* Border */
+  --border-radius: 4px;
+  --border-width: 1px;
+  --border-color: #ced4da;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section__padding {
+  padding: 3rem 8rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-bellfair);
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  font-weight: 400;
+  font-size: 150px;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  font-size: 56px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-family: var(--font-barlow-condensed);
+  font-weight: normal;
+  font-size: 28px;
+  letter-spacing: 4.75px;
+}
+
+p {
+  font-family: var(--font-barlow);
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--color-dimviolet);
+  margin: 0;
 }

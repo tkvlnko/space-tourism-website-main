@@ -1,0 +1,31 @@
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    justify-content: end;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
+
+.menu-desktop {
+    /* background-color: #979797; */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(255, 255, 255, 0.05);   
+    display: flex;
+    align-items: center;
+}
+.menu-desktop > :not(:first-child) {
+    margin-left: 1rem;
+}
+
+a {
+    text-decoration: none;
+    border: none;
+    height: 100%;
+}
+
+.menu-selected {
+    border-bottom: 1px solid var(--primary-color);
+}
