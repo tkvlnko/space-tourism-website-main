@@ -1,31 +1,84 @@
 nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
     position: fixed;
     top: 0;
     overflow: hidden;
     width: 100%;
-    justify-content: end;
+
     padding: 2rem 0;
-    box-sizing: border-box;
+}
+
+nav img {
+    margin: 0 2rem;
+}
+.menu-desktop, .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-desktop {
-    /* background-color: #979797; */
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    background-color: rgba(255, 255, 255, 0.05);   
-    display: flex;
-    align-items: center;
-}
-.menu-desktop > :not(:first-child) {
-    margin-left: 1rem;
+    backdrop-filter: blur(10px); 
+    background-color: var(--color-grey-dim);
+    width: 60%;
 }
 
-a {
+.menu-desktop::before {
+    content: ''; 
+    display: block; 
+    position: absolute; 
+    top: 49.5%; 
+    left: 0;
+    /* transform: translateY(-50%); Translates the pseudo-element up by half of its own height to center it vertically */
+    width: 20px; /* Adjust the width of the line */
+    height: 1px;
+    background-color: var(--color-grey); /* Adjust the color of the line */
+}
+
+.menu-desktop > :not(:first-child) {
+    margin-left: 3rem;
+}
+
+.nav-item {
     text-decoration: none;
-    border: none;
+    border: 2px solid transparent;
     height: 100%;
+    padding: 1.5rem 0;   
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid var(--color-white-dim)
 }
 
 .menu-selected {
-    border-bottom: 1px solid var(--primary-color);
+    border-bottom: 2px solid var(--color-white);
+}
+
+.nav-item p {
+    text-transform: uppercase;
+    font-family: var(--font-barlow-condensed);
+    color: var(--color-white);
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+span {
+    font-family: var(--font-barlow-condensed);
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.nav-line {
+    /* min-width: 100%; */
+    width: 40%;
+    box-sizing: border-box;
+    height: 1px;
+    background-color: var(--color-grey);
 }

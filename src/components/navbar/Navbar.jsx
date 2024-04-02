@@ -8,32 +8,34 @@ const Navbar = () => {
     const logo = process.env.PUBLIC_URL + '/assets/shared/logo.svg';
 
     const menuItems = [
-        { id: 'home', label: 'Home' },
-        { id: 'destination', label: 'Destination' },
-        { id: 'crew', label: 'Crew' },
-        { id: 'technology', label: 'Technology' }
+        { id: 'home', label: 'Home', number: '00' },
+        { id: 'destination', label: 'Destination', number: '01' },
+        { id: 'crew', label: 'Crew', number: '02' },
+        { id: 'technology', label: 'Technology', number: '03' }
     ];
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem, setSelectedItem] = useState("home");
 
     const handleClick = (itemId) => {
         setSelectedItem(itemId);
     };
 
     return (
-        <nav className='nav'>
+        <nav>
             <img src={logo} alt="Logo" />
+            <div className='nav-line'></div>
             <div className='menu-desktop'>
                 {menuItems.map(item => (
                     <a 
                         key={item.id} 
                         href={`#${item.id}`} 
                         onClick={() => handleClick(item.id)} 
-                        className={selectedItem === item.id ? 'menu-selected' : ''}
+                        className={`${selectedItem === item.id ? 'menu-selected' : ''} nav-item `}
                     >
-                        {item.label}
+                        <p><span>{item.number}</span>{item.label}</p>
                     </a>
                 ))}
             </div>
+            
         </nav>
     );
 };

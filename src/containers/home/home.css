@@ -2,12 +2,61 @@
     height: 100vh;
     width: 100wv;
 
-    background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+    background-image: url("../../../public/assets/home/background-home-desktop-2.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 100% 100%;
 
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: end;
     box-sizing: border-box;
+    padding-bottom: 7rem;
 }
+
+
+#home  a {
+    text-decoration: none;
+}
+
+.home-content {
+    animation: slideIn-1 1s ease forwards;
+    width: 38%;
+}
+
+.explore-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background-color: var(--color-white);
+    border-radius: 50%;
+
+    height: 274px;
+    width: 274px;
+    margin: 0 2rem;
+
+    transition: 0.3s ease;
+    animation: slideIn-2 1s ease forwards;
+}
+
+/* .explore-button-container {
+    width: 100%;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+} */
+
+.explore-button:hover {
+    box-shadow: 0 0 0 30px var(--color-white-dim);
+}
+
+.explore-button h4 {
+    color: var(--color-black);
+}
+
+
 

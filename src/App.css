@@ -5,8 +5,12 @@
 :root {
   /* Colors */
   --color-white: #ffffff;
+  --color-white-dim: #ffffff54;
+  --color-black: #000000;
   --color-dimviolet: #D0D6F9;
-
+  --color-grey-97: #979797;
+  --color-grey: #464646;
+  --color-grey-dim: rgba(255, 255, 255, 0.05);
   /* Fonts */
   --font-bellfair: "Bellefair", serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
@@ -23,6 +27,33 @@
   --border-color: #ced4da;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideIn-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideIn-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+
 .section__padding {
   padding: 3rem 8rem;
 }
@@ -31,6 +62,8 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-bellfair);
   text-transform: uppercase;
   color: var(--color-white);
+  font-weight: 400;
+
   margin: 0;
 }
 
@@ -48,7 +81,7 @@ h3 {
 }
 
 h4 {
-  font-size: 32px;
+  font-size: 32px;  
 }
 
 h5 {
@@ -56,6 +89,7 @@ h5 {
   font-weight: normal;
   font-size: 28px;
   letter-spacing: 4.75px;
+  color: var(--color-dimviolet);
 }
 
 p {
@@ -64,4 +98,5 @@ p {
   font-weight: normal;
   color: var(--color-dimviolet);
   margin: 0;
+  line-height: 32px;
 }
