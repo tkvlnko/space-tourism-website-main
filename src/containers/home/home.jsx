@@ -4,7 +4,7 @@ import "../../App.css";
 
 const Home = () => {
   return (
-    <div id='home' className='section__padding'>
+    <section id='home' className='section__padding section__bg'>
       <div className='home-content'>
         <h5>So, you want to travel to</h5>
         <h1>Space</h1>
@@ -17,7 +17,7 @@ const Home = () => {
             <h4>Explore</h4>
             </a>   
       </div>
-    </div>
+    </section>
   )
 }
 

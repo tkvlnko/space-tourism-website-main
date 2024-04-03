@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-// import logo from '../../../public/assets/shared/logo.svg';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
 require('../../App.css');
-
 
 const Navbar = () => {
     const logo = process.env.PUBLIC_URL + '/assets/shared/logo.svg';
@@ -18,6 +16,29 @@ const Navbar = () => {
     const handleClick = (itemId) => {
         setSelectedItem(itemId);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = document.querySelectorAll('section');
+            let selected = 'home';
+
+            sections.forEach(section => {
+                const { top, bottom } = section.getBoundingClientRect();
+                const offsetY = window.scrollY;
+
+                if (top <= 0 && bottom > 0 && offsetY > top) {
+                    selected = section.id;
+                }
+            });
+
+            setSelectedItem(selected);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <nav>
@@ -35,7 +56,6 @@ const Navbar = () => {
                     </a>
                 ))}
             </div>
-            
         </nav>
     );
 };

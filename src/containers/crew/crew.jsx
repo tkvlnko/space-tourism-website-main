@@ -1,47 +1,60 @@
 import jsonData from '../../data.json';
 import React, { useState } from 'react';
+import { Swipeable } from 'react-swipeable'; 
+
 import "./crew.css";
 import "../../App.css";
 
 
 const Crew = () => {
-    const crew = jsonData.crew;
-    const [selectedMember, setSelectedMember] = useState(0);
+    const { crew  } = jsonData;
+    const [selectedMember, setSelectedMember] = useState(crew[0]);
+    // console.log(selectedMember);
 
-    const handleNextClick = () => {
-        setSelectedMember((selectedMember + 1) % crew.length);
-        console.log(selectedMember);
+    const handleClick = (member) => {
+        setSelectedMember(member);
     };
 
-    const handlePreviousClick = () => {
-        if (selectedMember === 0) {
-            setSelectedMember((crew.length - 1));
-        } else {
-            setSelectedMember((selectedMember - 1));
-        }
-    };
+
+    
+    // const handleNextClick = () => {
+    //     setSelectedMember((selectedMember + 1) % crew.length);
+    //     console.log(selectedMember);
+    // };
+
+    // const handlePreviousClick = () => {
+    //     if (selectedMember === 0) {
+    //         setSelectedMember((crew.length - 1));
+    //     } else {
+    //         setSelectedMember((selectedMember - 1));
+    //     }
+    // };
 
 return (
-    <div id="crew">
-        <button onClick={() => handleNextClick()}>next</button>
-        <ul>
-            {crew.map((member, index) => (
-                <li key={index} className={selectedMember === index ? 'selected' : ''}>
-                    {index + 1}
-                </li>
-            ))}
-        </ul>
-        <button onClick={() => handlePreviousClick()}>previous</button>
+    <section id="crew" className='section__padding section__bg'>
+        
+        <h5><span>02</span>Meet your crew</h5>
 
-        {}
-        <div>
-            <h1>{crew[selectedMember].name}</h1>
-            <p>{crew[selectedMember].role}</p>
-            <p>Bio: {crew[selectedMember].bio}</p>
-            <img src={crew[selectedMember].images.png} alt='destination'/>
-        </div>
+        {selectedMember && (
+            <div className='member-info'>
+                <div className='member-info-text'>
+                    <h4>{selectedMember.role}</h4>
+                    <h3>{selectedMember.name}</h3>
+                    <p>Bio: {selectedMember.bio}</p>
+                </div>
+                <img src={selectedMember.images.png} alt='destination'/>
+            </div>
+        )}
 
-        </div>
+        <div className='members-list'>
+                    {crew.map(({ name }, index) => (
+                        <div key={index} onClick={() => handleClick(crew[index])}
+                            className={`${selectedMember === crew[index] ? 'crew-list-selected' : ''} crew-list-item `}>
+                        </div>
+                    ))}
+            </div>
+
+        </section>
     );
 };
 

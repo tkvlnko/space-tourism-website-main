@@ -1,12 +1,5 @@
 #home {
-    height: 100vh;
-    width: 100wv;
-
     background-image: url("../../../public/assets/home/background-home-desktop-2.png");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
 
     display: flex;
     justify-content: space-between;
@@ -42,16 +35,8 @@
     animation: slideIn-2 1s ease forwards;
 }
 
-/* .explore-button-container {
-    width: 100%;
-    padding: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: end;
-} */
-
 .explore-button:hover {
-    box-shadow: 0 0 0 30px var(--color-white-dim);
+    box-shadow: 0 0 0 50px var(--color-white-dim);
 }
 
 .explore-button h4 {

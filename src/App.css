@@ -5,7 +5,7 @@
 :root {
   /* Colors */
   --color-white: #ffffff;
-  --color-white-dim: #ffffff54;
+  --color-white-dim: #ffffff1d;
   --color-black: #000000;
   --color-dimviolet: #D0D6F9;
   --color-grey-97: #979797;
@@ -53,12 +53,19 @@ html {
   }
 }
 
-
-.section__padding {
-  padding: 3rem 8rem;
+.section__bg {
+  height: 100vh;
+  width: 100wv;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5 {
+.section__padding {
+  padding: 3rem 10rem;
+}
+
+h1, h2, h3, h4, h5, .sub-1 {
   font-family: var(--font-bellfair);
   text-transform: uppercase;
   color: var(--color-white);
@@ -84,7 +91,8 @@ h4 {
   font-size: 32px;  
 }
 
-h5 {
+h5, .sub-2 {
+  text-transform: uppercase;
   font-family: var(--font-barlow-condensed);
   font-weight: normal;
   font-size: 28px;
@@ -99,4 +107,13 @@ p {
   color: var(--color-dimviolet);
   margin: 0;
   line-height: 32px;
+}
+
+.sub-2 {
+  font-size: 14px;
+  letter-spacing: 2.35px;
+}
+
+.sub-1 {
+  font-size: 28px;  
 }
