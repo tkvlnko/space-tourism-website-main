@@ -26,7 +26,6 @@
 }
 
 .members-list {
-    list-style-type: none;
     display: flex;
     margin-bottom: 6rem;
 }
@@ -37,10 +36,6 @@
 
 .member-info-text h4 {
     opacity: 0.3;
-}
-
-.member-info-text h3 {
-    margin: 1rem 0 2rem;
 }
 
 .crew-list-item {

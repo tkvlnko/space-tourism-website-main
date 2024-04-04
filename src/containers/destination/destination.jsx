@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./destination.css";
 import jsonData from '../../data.json';
+import Heading from '../../components/heading/heading';
 
 const Destination = () => {
     const { destinations } = jsonData;
@@ -12,8 +13,7 @@ const Destination = () => {
 
     return (
         <section id="destination" className='section__padding section__bg'>
-            <h5><span>01</span>Pick your destination</h5>
-
+            <Heading number="01" text="Pick your destination" />
             <div className='destinations-content'>
                 <ul className='destinations-list'>
                     {destinations.map(({ name }, index) => (

@@ -1,5 +1,7 @@
 import jsonData from '../../data.json';
 import React, { useState } from 'react';
+import Heading from '../../components/heading/heading';
+
 
 import "./crew.css";
 import "../../App.css";
@@ -14,7 +16,7 @@ const Crew = () => {
 
     return (
         <section id="crew" className='section__padding section__bg'>
-            <h5><span>02</span>Meet your crew</h5>
+            <Heading number="02" text="Meet your crew" />
             {selectedMember && (
                 <div className='member-info'>
                     <div className='member-info-text'>

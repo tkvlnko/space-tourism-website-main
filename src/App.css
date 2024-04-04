@@ -65,6 +65,12 @@ html {
   padding: 3rem 10rem;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, .sub-1 {
   font-family: var(--font-bellfair);
   text-transform: uppercase;
@@ -85,6 +91,7 @@ h2 {
 
 h3 {
   font-size: 56px;
+  margin: 1rem 0 2rem;
 }
 
 h4 {
@@ -97,7 +104,7 @@ h5, .sub-2 {
   font-weight: normal;
   font-size: 28px;
   letter-spacing: 4.75px;
-  color: var(--color-dimviolet);
+  color: var(--color-white);
 }
 
 p {
@@ -116,4 +123,8 @@ p {
 
 .sub-1 {
   font-size: 28px;  
+}
+
+span {
+  opacity: 0.3;
 }

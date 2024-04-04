@@ -52,7 +52,7 @@ const Navbar = () => {
                         onClick={() => handleClick(item.id)} 
                         className={`${selectedItem === item.id ? 'menu-selected' : ''} nav-item `}
                     >
-                        <p><span>{item.number}</span>{item.label}</p>
+                        <p><span style={{ opacity: 1}}>{item.number}</span>{item.label}</p>
                     </a>
                 ))}
             </div>

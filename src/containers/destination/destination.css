@@ -14,9 +14,6 @@
     color: var(--color-white);
 }
 
-#destination h5 > span {
-    opacity: 0.3;
-}
 
 .destinations-content, .destinations-list, 
 .destination-item, .destination-item-info,  
@@ -29,7 +26,6 @@
 }
 
 .destinations-list {
-    list-style-type: none;
     width: 40%;
     margin-top: 1rem;
 }

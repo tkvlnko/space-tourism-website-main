@@ -4,6 +4,7 @@ import Home from './containers/home/home';
 import Destination from './containers/destination/destination';
 import Crew from './containers/crew/crew';
 import Technology from './containers/technology/technology';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Destination />
       <Crew />
       <Technology />
+      <Footer />
     </div>
   );
 }
