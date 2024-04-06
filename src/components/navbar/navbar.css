@@ -7,7 +7,8 @@ nav {
     position: fixed;
     top: 0;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
 
     padding: 2rem 0;
     z-index: 2000;
@@ -15,6 +16,8 @@ nav {
 
 nav img {
     margin: 0 2rem;
+    width: 10%;
+    max-width: 10%;
 }
 .menu-desktop, .nav-item {
     display: flex;
@@ -25,7 +28,9 @@ nav img {
 .menu-desktop {
     backdrop-filter: blur(10px); 
     background-color: var(--color-grey-dim);
-    width: 60%;
+    width: 50%;
+    max-width: 50%;
+    padding: 0 2rem;
 }
 
 .menu-desktop::before {
@@ -34,10 +39,9 @@ nav img {
     position: absolute; 
     top: 49.5%; 
     left: 0;
-    /* transform: translateY(-50%); Translates the pseudo-element up by half of its own height to center it vertically */
-    width: 20px; /* Adjust the width of the line */
+    width: 20px; 
     height: 1px;
-    background-color: var(--color-grey); /* Adjust the color of the line */
+    background-color: var(--color-grey); 
 }
 
 .menu-desktop > :not(:first-child) {
@@ -79,7 +83,14 @@ span {
 .nav-line {
     /* min-width: 100%; */
     width: 40%;
+    max-width: 40%;
     box-sizing: border-box;
     height: 1px;
     background-color: var(--color-grey);
+}
+
+@media screen and (max-width: 1000px) {
+    .menu-desktop::before {
+        display: none; 
+    }
 }

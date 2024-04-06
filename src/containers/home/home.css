@@ -43,5 +43,21 @@
     color: var(--color-black);
 }
 
+@media screen and (max-width: 1000px) {
+    .explore-button {
+        height: 190px;
+        width: 190px;
+    }
+    .explore-button h4 {
+        font-size: 20px;
+    }
+    .home-content {
+        width: 90%;
+    }
+
+    .nav-line {
+        display: none;
+    }
+}
 
 

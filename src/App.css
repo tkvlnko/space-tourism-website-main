@@ -11,6 +11,7 @@
   --color-grey-97: #979797;
   --color-grey: #464646;
   --color-grey-dim: rgba(255, 255, 255, 0.05);
+  --color-dark-blue: #0d0f1b;
   /* Fonts */
   --font-bellfair: "Bellefair", serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
@@ -59,6 +60,7 @@ html {
   background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 .section__padding {
@@ -127,4 +129,10 @@ p {
 
 span {
   opacity: 0.3;
+}
+
+@media screen and (max-width: 1100px) {
+  .section__padding {
+    padding: 2rem 8rem;
+  }
 }
