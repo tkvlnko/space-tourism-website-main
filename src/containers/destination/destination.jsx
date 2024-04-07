@@ -14,6 +14,12 @@ const Destination = () => {
     return (
         <section id="destination" className='section__padding section__bg'>
             <Heading number="01" text="Pick your destination" />
+            {selectedDestination ? (
+                    <div className='destinaiton-mobile-img'>
+                            <img src={selectedDestination.images.png} alt='destination' />
+                    </div>
+                ) : null}
+
             <div className='destinations-content'>
                 <ul className='destinations-list'>
                     {destinations.map(({ name }, index) => (

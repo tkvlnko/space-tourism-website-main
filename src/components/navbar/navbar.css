@@ -16,8 +16,8 @@ nav {
 
 nav img {
     margin: 0 2rem;
-    width: 10%;
-    max-width: 10%;
+    /* width: 10%; */
+    /* max-width: 10%; */
 }
 .menu-desktop, .nav-item {
     display: flex;
@@ -44,8 +44,8 @@ nav img {
     background-color: var(--color-grey); 
 }
 
-.menu-desktop > :not(:first-child) {
-    margin-left: 3rem;
+.menu-desktop > * {
+    margin-left: 10%;
 }
 
 .nav-item {
@@ -92,5 +92,21 @@ span {
 @media screen and (max-width: 1000px) {
     .menu-desktop::before {
         display: none; 
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .menu-desktop {
+        width: 50%; 
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        padding: 0;
+    }
+    .nav-item > p > span {
+        display: none;
     }
 }

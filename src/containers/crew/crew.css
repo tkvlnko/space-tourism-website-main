@@ -57,3 +57,32 @@
 .members-list > :not(:first-child) {
     margin-left: 20px;
 }
+
+@media screen and (max-width: 800px) {
+
+    #crew {
+        justify-content: start;
+        background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");
+
+    }
+    .member-info > img {
+        display: none;
+    }
+    .member-info-text p {
+        width: 100%;
+    }
+
+    .member-info {
+        justify-content: start;
+        align-items: start;
+        margin-top: 3rem;
+        text-align: center;
+        height: auto;
+    }
+
+    .members-list {
+        width: 100%;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+}

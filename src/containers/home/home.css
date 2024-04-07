@@ -9,7 +9,7 @@
 }
 
 
-#home  a {
+#home a {
     text-decoration: none;
 }
 
@@ -60,4 +60,13 @@
     }
 }
 
+@media screen and (max-width:800px){
+    #home {
+        background-image: url("../../../public/assets/home/background-home-tablet.jpg");
+        flex-direction: column;
+        padding: 10rem 3rem;
+        text-align: center;
+        align-items: center;
+    }
+}
 

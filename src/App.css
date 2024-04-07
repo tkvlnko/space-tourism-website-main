@@ -136,3 +136,33 @@ span {
     padding: 2rem 8rem;
   }
 }
+@media screen and (max-width: 800px){
+  h1 {
+    font-weight: 400;
+    font-size: 120px;
+  }
+  
+  h2 {
+    font-size: 80px;
+  }
+  
+  h3 {
+    font-size: 40px;
+  }
+  
+  h4 {
+    font-size: 20px;  
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--color-dimviolet);
+    margin: 0;
+    line-height: 32px;
+  }
+}

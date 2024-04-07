@@ -33,6 +33,9 @@
     animation: fadeIn2 0.5s ease forwards;
 }
 
+.destinaiton-mobile-img {
+    display: none;
+}
 @keyframes fadeIn2 {
     from {
         opacity: 0;
@@ -101,4 +104,46 @@
 .destination-add-container {
     width: 70%;
     justify-content: space-between;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #destination {
+        justify-content: start;
+        padding: 7rem 2rem;
+    }
+
+    .destinations-content {
+        align-items: center;
+    }
+    .destination-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .destination-item-info {
+        width: 100%;
+        align-items: center;
+    }
+
+    .destinaiton-mobile-img {
+        display: flex;
+        justify-content: center;
+        margin: 2rem;
+    }
+    .destinaiton-mobile-img img {
+        width: 300px;
+        height: 300px;
+    }
+    .destination-img-container {
+        display: none;
+    }
+
+    .destinations-list {
+        width: 100%;
+        justify-content: center;
+    }
 }
