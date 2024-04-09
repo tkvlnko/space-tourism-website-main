@@ -15,6 +15,12 @@ const Technology = () => {
 return (
     <section id="technology" className='section__padding section__bg'>
         <Heading number="03" text="Space launch 101"/>
+
+        {selectedTechnology ? (
+                    <div className='tech-mobile-img'>
+                            <img src={selectedTechnology.images.landscape} alt='destination' />
+                    </div>
+                ) : null}
             <div className='tech-content'>
             <ul>
                 {technology.map((technology, index) => (
@@ -25,7 +31,7 @@ return (
             </ul>
 
             {selectedTechnology && <div className='tech-step'>
-                <div className='text-step-info'>
+                <div className='tech-step-info'>
                     <p className='sub-2'>the terminology...</p>
                     <h3>{selectedTechnology.name}</h3>
                     <p>{selectedTechnology.description}</p>

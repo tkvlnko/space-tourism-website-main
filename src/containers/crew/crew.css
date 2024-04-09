@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 0;
-    padding-top: 12rem;
+    /* padding-top: 12rem; */
     box-sizing: border-box;
     position:relative;
 }
@@ -58,12 +58,24 @@
     margin-left: 20px;
 }
 
+.crew-mobile-img {
+    height: 440px;
+    width: 100%;
+    justify-content: center;
+    align-items: end;
+    display: none;
+}
+
+.crew-mobile-img img {
+    height: 100%;
+}
+
 @media screen and (max-width: 800px) {
 
     #crew {
-        justify-content: start;
+        /* justify-content: start; */
         background-image: url("../../../public/assets/crew/background-crew-tablet.jpg");
-
+        /* padding: 7rem 3rem 0 3rem; */
     }
     .member-info > img {
         display: none;
@@ -73,9 +85,9 @@
     }
 
     .member-info {
-        justify-content: start;
-        align-items: start;
-        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 5rem;
         text-align: center;
         height: auto;
     }
@@ -84,5 +96,14 @@
         width: 100%;
         justify-content: center;
         margin: 2rem 0;
+    }
+
+    .crew-mobile-img {
+        display: flex;
+    }
+
+    .member-info-text > p {
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 }

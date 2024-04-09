@@ -2,6 +2,7 @@
     background-image: url("../../../public/assets/technology/background-technology-desktop.jpg");
     display: flex;
     flex-direction: column;
+    position: relative;
     justify-content: space-between;
     padding-bottom: 6rem;
     padding-top: 12rem;
@@ -17,7 +18,9 @@
     align-items: center;
     position: relative;
 }
-
+.tech-step-info {
+    flex-direction: column;
+}
 .tech-item {
     color: var(--color-white);
     height: 25px;
@@ -33,9 +36,9 @@
     transition: 0.3s ease;
 }
 
-.tech-content ul :not(:last-child){
+/* .tech-content ul :not(:last-child){
     margin-bottom: 2rem;
-}
+} */
 
 .tech-item:hover {
     background-color: var(--color-white-dim);
@@ -47,7 +50,7 @@
 }
 
 .tech-step {
-    width: 45%;
+    width: 55%;
 }
 
 .tech-step p {
@@ -55,7 +58,7 @@
 }
 
 .tech-step-info {
-    width: 30%;
+    /* width: 30%; */
     margin-right: 3rem;
 }
 
@@ -67,12 +70,75 @@
     bottom: 0;
 }
 
+.tech-mobile-img {
+    display: none;
+}
+
 @media screen and (max-width: 1100px){
     .tech-step img {
         right: -8rem;
     }
 }
 
-@media screen and (max-width: 900px) {
-    
+@media screen and (max-width: 800px) {
+
+    #technology {
+        background-image: url("../../../public/assets/technology/background-technology-tablet.jpg");
+        padding: 7rem 0;
+        flex-direction: column;
+    }
+    .tech-mobile-img {
+        /* position: absolute; */
+        /* left: 0;
+        right: 0;
+        top: 11rem; */
+        max-width: 100%;
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .tech-mobile-img img{
+        width: 100%;
+    }
+    .tech-step img {
+        /* max-width: 100%; */
+        display: none;
+    }
+    .tech-content {
+        box-sizing: border-box;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0 6rem;
+    }
+
+    .tech-step-info p {
+        width: 100%;
+    }
+
+    .tech-step-info {
+        margin: 0;
+    }
+
+    .tech-step {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .tech-content ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0.5rem 0;
+    }
+
+    .tech-content ul > * {
+        margin: 1rem;
+    }
+
+    .tech-item {
+        height: 10px;
+        width: 10px;
+    }
 }

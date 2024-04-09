@@ -4,9 +4,12 @@
     background-image: url("../../../public/assets/destination/background-destination-desktop-2.png");
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 7rem;
-    padding-top:  7rem ;
+    box-sizing: border-box;
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    justify-content: flex-end;
+    /* padding-bottom: 7rem;
+    padding-top:  7rem ; */
 }
 
 #destination h5, .destinations-list > li, .destination-list-item p {
@@ -26,7 +29,7 @@
 
 .destinations-list {
     width: 40%;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .destination-item {
@@ -111,7 +114,7 @@
 
     #destination {
         justify-content: start;
-        padding: 7rem 2rem;
+        /* padding: 7rem 3rem; */
     }
 
     .destinations-content {
@@ -121,7 +124,7 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        padding: 0 3rem;
+        padding: 0 6rem;
     }
 
     .destination-item-info {
@@ -132,7 +135,7 @@
     .destinaiton-mobile-img {
         display: flex;
         justify-content: center;
-        margin: 2rem;
+        margin: 3rem 0;
     }
     .destinaiton-mobile-img img {
         width: 300px;
@@ -145,5 +148,11 @@
     .destinations-list {
         width: 100%;
         justify-content: center;
+        margin: 0;
+    }
+
+    .destination-line {
+        width: 100%;
+        margin: 1rem 0 1rem 0;
     }
 }

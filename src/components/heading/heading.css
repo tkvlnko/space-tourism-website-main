@@ -1,0 +1,9 @@
+.heading {
+    color: 'var(--color-white)',
+    
+}
+@media screen and (max-width: 800px) {
+    .heading {
+        padding-left: 3rem;
+    }
+}

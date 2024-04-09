@@ -34,6 +34,11 @@ const Crew = () => {
                             </div>
                         ))}
                 </div>
+                {selectedMember ? (
+                    <div className='crew-mobile-img'>
+                            <img src={selectedMember.images.png} alt='crew-member' />
+                    </div>
+                ) : null}
             </section>
     );
 };
